@@ -1,17 +1,20 @@
-<h1>Nombre del Heroe <small>Fecha Aparicion</small> </h1>
+<h1 class="animated fadeIn">{{ heroe.nombre | uppercase }} <br> <small>( {{ heroe.aparicion | date: 'y'}} )</small> </h1>
 
-<div class="row">
+<div class="row animated fadeIn fast">
   <div class="col-md-4">
-    <img src="assets/img/hulk.png" class="img-fluid" alt="">
+    <img [src]="heroe.img" class="img-fluid border border-secondary rounded p-2" alt="">
 
     <div class="py-3"></div>
 
-    <a href="heroes" class=btn btn-outline-danger btn-bl> Regresar</a>
+    <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-block"> Regresar</a>
   </div>
   <div class="col-md-8">
-    <h3>Nombre Heroe</h3>
+    <h3>{{ heroe.nombre }}</h3>
     <hr>
-    <p>Bio del heroe</p>
-    <div><img src="" alt=""></div>
+    <p>{{ heroe.bio }}</p>
+    <div class="row">
+        <img *ngIf="heroe.casa == 'DC'" src="assets/img/dc-comics.jpg" class="img-logo">
+        <img *ngIf="heroe.casa == 'Marvel'" src="assets/img/marvel-comics.jpg" class="img-logo">
+    </div>
   </div>
 </div>
