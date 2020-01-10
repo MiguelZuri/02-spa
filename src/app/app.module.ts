@@ -17,7 +17,11 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 // Routes
 import { AppRoutingModule } from './app-routing.module';
 
+
 // Services
+import { HeroesService } from './services/heroes.service';
+import { HeroeComponent } from './components/heroe/heroe.component';
+
 
 @NgModule({
   declarations: [
@@ -25,13 +29,16 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
