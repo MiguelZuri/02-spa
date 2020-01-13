@@ -5,7 +5,6 @@ import { HeroesService, Heroe } from '../../services/heroes.service'
 @Component({
   selector: 'app-heroe',
   templateUrl: './heroe.component.html',
-  styles: []
 })
 export class HeroeComponent{
 
