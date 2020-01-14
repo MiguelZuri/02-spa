@@ -13,7 +13,6 @@ export class SearchComponent implements OnInit{
   termino:string;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private router:Router,
               private _heroesService: HeroesService) {
               }
 
@@ -25,10 +24,6 @@ export class SearchComponent implements OnInit{
       console.log(this.heroes);
     });
 
-  }
-
-  verHeroe( idx:number ){
-    this.router.navigate( ['/heroe', idx] );
   }
 
 }
